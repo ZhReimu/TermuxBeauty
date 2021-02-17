@@ -41,13 +41,13 @@ git@github.com:ZhReimu/TermuxBeauty.git
 ### 使用 git
 ```
 git clone git@github.com:ZhReimu/TermuxBeauty.git # 克隆仓库
-git status  # 显示当前 git 的状态(改动了哪些文件之类的)
-git add "改动了的文件"  # 缓存改动
-git add * 或 git add . # 缓存当前文件夹内所有文件
+git status    # 显示当前 git 的状态(改动了哪些文件之类的)
+git add "改动了的文件"    # 缓存改动
+git add * 或 git add .   # 缓存当前文件夹内所有文件
 git commit -m "改动说明"  # commit 文件
-git push  # 提交改动
+git push    # 提交改动
 # 如果本地仓库与 GitHub 上内容不一样那就得先 fetch 然后 merge 最后才能 push
-git fetch # 获取云端改动
-git merge # 合并云端与本地
+git fetch   # 获取云端改动
+git merge   # 合并云端与本地
 ```
 目前就这么多吧
