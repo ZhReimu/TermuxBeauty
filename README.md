@@ -31,7 +31,7 @@ bash jdk.sh
 - ssh-keygen 一路回车生成公钥
 - 默认文件名是 id_rsa.pub 路径是 $HOME/.ssh/id_rsa.pub Windows 端是 C:\Users\用户名\.ssh
 - 添加公钥进 GitHub
-- 点击链接[添加公钥](https://github.com/settings/keys)，选择 New SSH key 
+- 点击链接 [添加公钥](https://github.com/settings/keys)，选择 New SSH key 
 - 名字随意，内容就是 id_rsa.pub 里的文字
 - 克隆仓库
 - 首先得新建一个仓库就是
