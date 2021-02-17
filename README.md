@@ -9,7 +9,7 @@ echo "" >$HOME/.termux/termux.properties
 #### 既然可以用脚本完成，为什么要去手动重复这一堆繁琐的工作呢？
 #### 于是，此脚本应运而生。
 #### 附赠
-1. jvdroid 里的 openjdk 11.0.1 及其安装脚本。
+1. jvdroid 里的 openjdk 11.0.1 及其安装脚本( jdk 仅支持 aarch64 的系统)。
 2. php.ini 文件 众所周知，termux 里的 php 莫得 php.ini ！！这会导致在运行 php 时产生一些莫名其妙的 bug。
 #### [php.ini](https://github.com/ZhReimu/TermuxBeauty/blob/main/php.ini) 集成到了 [termux优化.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/termux%E4%BC%98%E5%8C%96.sh) 中了
 #### [jdk.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/jdk.sh) 分开放着的，因为不是每次都要用 jdk 嘛，而且它还很大，比较耗时。
