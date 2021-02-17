@@ -11,8 +11,8 @@ echo "" >$HOME/.termux/termux.properties
 #### 附赠
 1. jvdroid 里的 openjdk 11.0.1 及其安装脚本。
 2. php.ini 文件 众所周知，termux 里的 php 莫得 php.ini ！！这会导致在运行 php 时产生一些莫名其妙的 bug。
-#### [php.ini](https://github.com/ZhReimu/TermuxBeauty/blob/main/php.ini) 集成到了  [termux优化.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/termux%E4%BC%98%E5%8C%96.sh)中了
-#### [jdk.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/jdk.sh)分开放着的，因为不是每次都要用jdk嘛，而且它还很大，比较耗时。
+#### [php.ini](https://github.com/ZhReimu/TermuxBeauty/blob/main/php.ini) 集成到了 [termux优化.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/termux%E4%BC%98%E5%8C%96.sh) 中了
+#### [jdk.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/jdk.sh) 分开放着的，因为不是每次都要用 jdk 嘛，而且它还很大，比较耗时。
 ## 用法
 - 全部克隆到本地 那就可以同时执行下边两个命令
 - 只要 termux优化 那就只下载 [php.ini](https://github.com/ZhReimu/TermuxBeauty/blob/main/php.ini) 与 [termux优化.sh](https://github.com/ZhReimu/TermuxBeauty/blob/main/termux%E4%BC%98%E5%8C%96.sh)
@@ -29,7 +29,9 @@ bash jdk.sh
 ## 顺便记录下 git 命令的用法
 ### GitHub 使用 ssh 登陆
 - ssh-keygen 一路回车生成公钥
-- 默认文件名是 id_rsa.pub 路径是 $HOME/.ssh/id_rsa.pub Windows 端是 C:\Users\用户名\.ssh
+- 默认文件名是 id_rsa.pub 
+- Linux 端路径是 $HOME/.ssh/id_rsa.pub 
+- Windows 端是 C:\Users\用户名\.ssh
 - 添加公钥进 GitHub
 - 点击链接 [添加公钥](https://github.com/settings/keys)，选择 New SSH key 
 - 名字随意，内容就是 id_rsa.pub 里的文字
