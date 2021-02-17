@@ -36,15 +36,16 @@ bash jdk.sh
 - 克隆仓库
 - 首先得新建一个仓库就是
 - 使用这样的 ssh 链接克隆的仓库才能用 ssh 免密码登陆
+```
+git@github.com:ZhReimu/TermuxBeauty.git
+```
 - 设置 git 的用户名和邮箱
 ```bash
 git config --global user.name "username"
 git config --global user.email "username@domain.com"
 ```
 - 设置完成可以用 ``` git -l ``` 来查看设置情况，按 q 键退出查看
-```
-git@github.com:ZhReimu/TermuxBeauty.git
-```
+
 ### 使用 git
 ```
 git clone git@github.com:ZhReimu/TermuxBeauty.git # 克隆仓库
