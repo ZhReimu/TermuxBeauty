@@ -26,7 +26,7 @@ echo "正在克隆zsh高亮工具"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 echo "正在安装常用工具"
-pkg in python wget libxslt ffmpeg php file tracepath dnsutils zip unzip make cmake proot tree neofetch openssh -y
+pkg in python wget libxslt ffmpeg php file tracepath dnsutils zip unzip make cmake proot tree neofetch openssh termux-api -y
 echo "常用工具安装完成！"
 echo "正在给pip换源"
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
