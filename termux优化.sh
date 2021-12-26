@@ -2,15 +2,13 @@
 echo "正在请求SD卡权限"
 termux-setup-storage
 echo "正在更换国内软件源"
-sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
-sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
-sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
+termux-change-repo
 echo "正在更新软件源"
 apt update -y && apt upgrade -y
 echo "正在安装zsh"
 apt install -y git zsh
 echo "正在克隆ohmyzsh"
-git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
+git clone git://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
 echo "正在备份原数据"
 mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
@@ -23,13 +21,13 @@ sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
 echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
 echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
 echo "正在克隆zsh高亮工具"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 echo "正在安装常用工具"
-pkg in python wget libxslt ffmpeg php file tracepath dnsutils zip unzip make cmake proot tree neofetch openssh termux-api pstree htop -y
+pkg in python wget libxslt ffmpeg php file tracepath dnsutils zip unzip make cmake proot tree neofetch openssh termux-api htop -y
 echo "常用工具安装完成！"
 echo "正在给pip换源"
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 echo "换源完成！"
 echo "正在安装常用 python 库"
 pip install requests
